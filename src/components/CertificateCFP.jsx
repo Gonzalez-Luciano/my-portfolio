@@ -9,6 +9,7 @@ class CertificateCFP extends Component {
       window.close();
     }
   }
+  
   render() {
     return (
       <div>
