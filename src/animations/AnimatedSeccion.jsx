@@ -8,6 +8,7 @@ const AnimatedSection = ({ children, sectionId }) => {
     opacity: 0,
     transform: 'translateY(50px)',
   }));
+  
 
   const handleScroll = () => {
     const element = document.getElementById(sectionId);
