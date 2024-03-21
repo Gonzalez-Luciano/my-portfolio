@@ -6,7 +6,6 @@ const Skills = () => {
     <AnimatedSection sectionId="ExampleSection">
       <div className=" m-4 max-w-full mx-auto shadow-md overflow-hidden">
         <div className="p-8 text-center text-white mt-7">
-          <a href="tel:+5492233054493" onclick="ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Call', eventLabel: 'Mobile Button'});"><p class="call-button">Click to Call</p></a>
           <div className="uppercase tracking-wide text-2xl font-semibold mb-4">
             Example Section
           </div>
