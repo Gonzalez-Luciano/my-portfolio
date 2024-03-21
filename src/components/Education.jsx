@@ -20,6 +20,8 @@ const schools = [
     href: "##",
     image: ISET,
     certificateDisabled: true,
+    borderColor:"border-green-500",
+    shadowColorClass:"hover:shadow-green-500/50"
   },
   {
     id:"CFP_N_401",
@@ -33,6 +35,8 @@ const schools = [
     href: "CertificateCFP.pdf",
     image: CFP_401,
     certificateDisabled: false,
+    borderColor:"border-pink-500",
+    shadowColorClass:"hover:shadow-pink-500/50"
   },
   {
     id:"IAM",
@@ -41,10 +45,12 @@ const schools = [
     date: "2012-2021",
     subTitle: "Bachelor's Degree",
     description:
-      "Studied English, Administration, and Economics, gaining comprehensive knowledge in these areas",
+      "Studied English, Administration, and Economics, gaining comprehensive knowledge in these areas.",
     href: "CertificateIAM.pdf",
     image: IAM,
     certificateDisabled: false,
+    borderColor:"border-cyan-500",
+    shadowColorClass:"hover:shadow-cyan-500/50"
   },
 ];
 
@@ -63,7 +69,7 @@ const Education = () => {
     <AnimatedSection sectionId="Education">
       <div
         ref={ref}
-        className="min-h-svh flex flex-col my-auto items-center relative justify-center px-4"
+        className="min-h-svh flex flex-col my-auto items-center relative justify-center"
       >
         <div
           className={`${
@@ -73,12 +79,12 @@ const Education = () => {
           }`}
         >
           <p className="font-medium text-white text-2xl">
-            Here is my <a className="text-orange-500">educational</a> journey
+            Here is my <span className="text-orange-500">educational</span> journey
           </p>
         </div>
-        <Popover.Group className="flex sm:flex-col sm:mr-auto sm:mb-0 sm:ml-0 flex-row mx-auto mb-auto">
+        <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row mx-auto mb-auto">
           {schools.map((school) => (
-            <Popover className="relative sm:mt-24 mt-2 mx-5">
+            <Popover className="relative sm:mt-24 mt-2 ml-1">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -87,14 +93,14 @@ const Education = () => {
                     className={`
                 ${
                   open
-                    ? " text-white transition duration-300 scale-150 "
-                    : "transition duration-300 scale-100"
+                    ? "sm:transition sm:duration-300 sm:scale-150"
+                    : "sm:transition sm:duration-300 sm:scale-100"
                 } ${
                       inView
                         ? "sm:animate-[ObjectAppear_2s_.2s_normal_forwards]"
                         : ""
                     }
-                sm:opacity-0 sm:ml-10 w-20 sm:w-28 inline-flex items-center rounded-md px-3 py-2 text-base font-medium hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75`}
+                    hover:shadow-lg ${school.shadowColorClass} sm:opacity-0 sm:ml-10 w-20 sm:w-28 inline-flex items-center border rounded-md px-3 py-2 font-medium  ${school.borderColor}`}
                   >
                     <img src={school.image} alt={school.name} />
                   </Popover.Button>
@@ -109,11 +115,11 @@ const Education = () => {
                     leaveTo="opacity-0 translate-y-1"
                     afterLeave={handlePopoverClick}
                   >
-                    <Popover.Panel className="fixed mx-auto w-full sm:w-fit sm:ml-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-3 ">
-                      <div className="overflow-hidden rounded-lg shadow-lg ">
+                    <Popover.Panel className="text-pretty w-full fixed mx-auto sm:w-fit sm:ml-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-3 ">
+                      <div className={`border ${school.borderColor} rounded-lg`}>
                         <div className="relative grid gap-8 bg-opacity-55 bg-black p-4 sm:p-7">
                           <div className="-m-3 flex items-center p-2 ">
-                            <div className="flex shrink-0 items-center justify-center text-white h-12 w-12">
+                            <div className="hidden md:flex shrink-0 items-center justify-center text-white h-12 w-12">
                               <img src={school.image} alt={school.name} />
                             </div>
                             <div className="ml-4">
