@@ -32,7 +32,7 @@ const AnimatedSection = ({ children, sectionId }) => {
   }, [isVisible, setSpring]);
 
   return (
-    <animated.div id={sectionId} style={{ opacity, transform, minHeight: '100svh'}}>
+    <animated.div id={sectionId} style={{ opacity, transform}}>
       {children}
     </animated.div>
   );

@@ -25,7 +25,7 @@ module.exports = {
       animation: {
         FadeInLeft: "FadeInLeft 2s ease 0s 1 normal forwards",
         SlideUp: "SlideUp 1.5s ease 0s 1 normal forwards",
-        ObjectAppear: "ObjectAppear 3s ease 0s 1 normal forwards "
+        ObjectAppear: "ObjectAppear 1s ease 2s 1 normal forwards "
       },
       colors: {
         transparent: "transparent",

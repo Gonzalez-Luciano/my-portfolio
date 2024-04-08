@@ -2,7 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Education from "./components/Education";
-import Skills from "./components/Skills";
+import Technologies from "./components/Technologies";
+import Projects from "./components/Projects"
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <div className="relative mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-12">
           <Home />
           <Education />
-          <Skills />
-          
+          <Technologies />
+          <Projects />
         </div>
       </main>
     </>
