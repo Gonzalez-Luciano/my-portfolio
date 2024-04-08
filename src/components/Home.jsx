@@ -1,19 +1,19 @@
 import React from "react";
-import photo from "../data/Photo.jpg";
-import linkdinICO from "../data/10-102671_linkedin-white-png-download-linkedin-icon-white-circle.png";
-import gitICO from "../data/PngItem_1280311.png";
-import { ArrowDownIcon, ArrowDownTrayIcon, CloudArrowDownIcon, DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import Me from "../data/Luciano.webp";
+import linkdinICO from "../data/linkedin.webp";
+import gitICO from "../data/github.webp";
+import {ArrowDownTrayIcon} from "@heroicons/react/24/outline";
 
 const Home = () => {
   return (
     <div id="Home" className="m-4 mb-24 max-w-full mx-auto flex justify-center">
       <div className="mt-44 ">
         <div className="flex justify-center max-w-2xl sm:ml-9 flex-col ">
-          <div className="flex  mx-5 sm:animate-FadeInLeft">
+          <div className="flex  mx-5 opacity-0 animate-ObjectAppear">
             <img
               className="block h-24 rounded-full mx-0 shrink-0"
-              src={photo}
-              alt="My Photo"
+              src={Me}
+              alt="LUCIANO GONZÁLEZ"
             />
           </div>
           <div className="py-8 ">
@@ -33,13 +33,13 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-wrap sm:flex-row sm:flex-nowrap items-center justify-center">
-            <div className="hover:scale-125 ease-out duration-300 mr-20">
+            <div className="hover:scale-125 ease-out duration-300 mx-auto sm:mr-20 sm:ml-0">
               <a
                 href="https://www.linkedin.com/in/luciano-gonzález-590350294"
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16">
+                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
                   <img
                     src={linkdinICO}
                     alt="Linkedin White Png Download - Linkedin Icon White Circle@pngkey.com"
@@ -47,18 +47,18 @@ const Home = () => {
                 </div>
               </a>
             </div>
-            <div className="hover:scale-125 ease-out duration-300 mr-20">
+            <div className="hover:scale-125 ease-out duration-300 mx-auto sm:mr-20  sm:ml-0">
               <a
                 href="https://github.com/TuKK2"
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16">
-                  <img className=" " src={gitICO} alt="GitHub Image" />
+                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
+                  <img className=" " src={gitICO} alt="GitHub" />
                 </div>
               </a>
             </div>
-            <button className="rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mr-20 mt-5 sm:mt-0">
+            <button className="rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mt-5 sm:mt-0 animate-ObjectAppear">
               <a
                 className="flex items-center"
                 href={require("../docs/LucianoGonzalezCV.pdf")}
