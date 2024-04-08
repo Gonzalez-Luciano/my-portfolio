@@ -3,9 +3,9 @@ import { Fragment, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../animations/AnimatedSeccion";
-import IAM from "../data/IAM.png";
-import CFP_401 from "../data/CFP_401.png";
-import ISET from "../data/ISET.png";
+import IAM from "../data/IAM.webp";
+import CFP_401 from "../data/CFP_401.webp";
+import ISET from "../data/ISET.webp";
 
 const schools = [
   {
