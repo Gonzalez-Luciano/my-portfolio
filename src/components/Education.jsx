@@ -2,7 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import AnimatedSection from "../animations/AnimatedSeccion";
+import AnimatedSection from "../animations/AnimatedSection";
 import IAM from "../data/IAM.webp";
 import CFP_401 from "../data/CFP_401.webp";
 import ISET from "../data/ISET.webp";

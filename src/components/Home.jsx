@@ -2,7 +2,7 @@ import React from "react";
 import Me from "../data/Luciano.webp";
 import linkdinICO from "../data/linkedin.webp";
 import gitICO from "../data/github.webp";
-import {ArrowDownTrayIcon} from "@heroicons/react/24/outline";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
   return (
@@ -26,10 +26,20 @@ const Home = () => {
             >
               Software Developer and Passionate Learner
             </p>
-            <p className="text-pretty mt-2 text-lg stext-slate-100 opacity-0 animate-[TextAppear_2s_.7s_normal_forwards]">
-              Enthusiastic about my pursuits, I eagerly welcome challenges and
-              relish the opportunity to expand my knowledge. My key quality?
-              Adaptability: It's the cornerstone of my evolution.
+            <p className="text-pretty mt-2 text-lg text-slate-100 opacity-0 animate-[TextAppear_2s_.7s_normal_forwards]">
+              Enthusiastic about my pursuits, I eagerly welcome{" "}
+              <span className=" text-white underline decoration-2 decoration-cyan-500">
+                challenges
+              </span>{" "}
+              and relish the opportunity to expand my knowledge. My key quality?{" "}
+              <span className=" text-white underline decoration-2 decoration-lime-500">
+                Adaptability
+              </span>
+              : It's the cornerstone of my{" "}
+              <span className=" text-white underline decoration-2 decoration-orange-500">
+                evolution
+              </span>
+              .
             </p>
           </div>
           <div className="flex flex-wrap sm:flex-row sm:flex-nowrap items-center justify-center">
@@ -39,7 +49,7 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
+                <div className="opacity-0 mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
                   <img
                     src={linkdinICO}
                     alt="Linkedin White Png Download - Linkedin Icon White Circle@pngkey.com"
@@ -53,12 +63,12 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
+                <div className="opacity-0 mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
                   <img className=" " src={gitICO} alt="GitHub" />
                 </div>
               </a>
             </div>
-            <button className="rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mt-5 sm:mt-0 animate-ObjectAppear">
+            <button className="opacity-0 rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mt-5 sm:mt-0 animate-ObjectAppear">
               <a
                 className="flex items-center"
                 href={require("../docs/LucianoGonzalezCV.pdf")}
