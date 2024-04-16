@@ -16,7 +16,7 @@ const Home = () => {
               alt="LUCIANO GONZÁLEZ"
             />
           </div>
-          <div className="py-8 ">
+          <div className="my-8">
             <div className="uppercase tracking-wide text-3xl sm:text-4xl text-white font-semibold opacity-0 animate-[TextAppear_2s_.2s_normal_forwards]">
               LUCIANO GONZÁLEZ
             </div>
@@ -84,6 +84,9 @@ const Home = () => {
                 <p className="">Download my CV</p>
               </a>
             </button>
+          </div>
+          <div className="flex opacity-0 mt-4 text-lg animate-ObjectAppear">
+            <p>Mar del Plata - Argentina</p>
           </div>
         </div>
       </div>
