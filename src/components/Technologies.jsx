@@ -15,7 +15,7 @@ import mariadbWebp from "../data/Technologies/mariadb.webp";
 
 const Skills = () => {
   return (
-    <AnimatedSection sectionId="TechnologiesSection">
+    <AnimatedSection sectionId="Technologies">
       <div className="flex flex-col justify-center mx-auto max-w-2xl mt-10">
         <div className="mx-auto text-3xl sm:text-4xl text-white font-semibold">
           Technologies

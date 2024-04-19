@@ -1,8 +1,8 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
-import App from '../App'
-import CertificateCFP from './CertificateCFP'
-import CertificateIAM from './CertificateIAM'
+import App from './App'
+import CertificateCFP from './components/CertificateCFP'
+import CertificateIAM from './components/CertificateIAM'
 
 const Router = () => {
   return (
