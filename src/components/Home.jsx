@@ -1,7 +1,4 @@
 import React from "react";
-import Me from "../data/Luciano.webp";
-import linkdinICO from "../data/linkedin.webp";
-import gitICO from "../data/github.webp";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
@@ -12,7 +9,7 @@ const Home = () => {
           <div className="flex  mx-5 opacity-0 animate-ObjectAppear">
             <img
               className="block h-24 rounded-full mx-0 shrink-0"
-              src={Me}
+              src={process.env.PUBLIC_URL + "/images/Home/Luciano.webp"}
               alt="LUCIANO GONZÁLEZ"
             />
           </div>
@@ -51,7 +48,7 @@ const Home = () => {
               >
                 <div className="opacity-0 mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
                   <img
-                    src={linkdinICO}
+                    src={process.env.PUBLIC_URL + "/images/Home/linkedin.webp"}
                     alt="Linkedin White Png Download - Linkedin Icon White Circle@pngkey.com"
                   />
                 </div>
@@ -64,7 +61,7 @@ const Home = () => {
                 rel="noreferrer"
               >
                 <div className="opacity-0 mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
-                  <img className=" " src={gitICO} alt="GitHub" />
+                  <img className=" " src={process.env.PUBLIC_URL + "/images/Home/github.webp"} alt="GitHub" />
                 </div>
               </a>
             </div>

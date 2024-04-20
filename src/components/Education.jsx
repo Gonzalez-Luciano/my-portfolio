@@ -3,9 +3,6 @@ import { Fragment, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../animations/AnimatedSection";
-import IAM from "../data/IAM.webp";
-import CFP_401 from "../data/CFP_401.webp";
-import ISET from "../data/ISET.webp";
 
 const schools = [
   {
@@ -18,7 +15,7 @@ const schools = [
       "Currently specializing in web development with a focus on JavaScript, HTML, and CSS. Also, refining proficiency in English and C programming.",
     time: "Expected completion: 2025",
     href: "##",
-    image: ISET,
+    image: process.env.PUBLIC_URL + "/images/Education/ISET.webp",
     certificateDisabled: true,
     borderColor:"border-green-500",
     shadowColorClass:"hover:shadow-green-500/50"
@@ -33,7 +30,7 @@ const schools = [
       "Completed a programming course covering C, Python, and MySQL. Also acquired skills in using TKinter.",
     time: "540 hrs",
     href: "CertificateCFP.pdf",
-    image: CFP_401,
+    image: process.env.PUBLIC_URL + "/images/Education/CFP_401.webp",
     certificateDisabled: false,
     borderColor:"border-pink-500",
     shadowColorClass:"hover:shadow-pink-500/50"
@@ -47,7 +44,7 @@ const schools = [
     description:
       "Studied English, Administration, and Economics, gaining comprehensive knowledge in these areas.",
     href: "CertificateIAM.pdf",
-    image: IAM,
+    image: process.env.PUBLIC_URL + "/images/Education/IAM.webp",
     certificateDisabled: false,
     borderColor:"border-cyan-500",
     shadowColorClass:"hover:shadow-cyan-500/50"
