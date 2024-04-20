@@ -68,7 +68,7 @@ const Home = () => {
             <button className="opacity-0 rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mt-5 sm:mt-0 animate-ObjectAppear">
               <a
                 className="flex items-center"
-                href={require("../docs/LucianoGonzalezCV.pdf")}
+                href={`${process.env.PUBLIC_URL}/pdfs/LucianoGonzalezCV.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 download="LucianoGonzalez.pdf"
