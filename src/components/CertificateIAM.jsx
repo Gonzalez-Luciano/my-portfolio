@@ -13,13 +13,13 @@ class CertificateIAM extends Component {
     return (
       <div>
         <object
-          data={require("../docs/CertificadoIAM.pdf")}
+          data={`${process.env.PUBLIC_URL}/pdfs/CertificadoIAM.pdf`}
           type="application/pdf"
           className="w-full h-full absolute"
         >
           <br />
           <a
-            href={require("../docs/CertificadoIAM.pdf")}
+            href={`${process.env.PUBLIC_URL}/pdfs/CertificadoIAM.pdf`}
             id="idLinkCertificadoIAM"
             download="CertificadoIAM.pdf"
           >

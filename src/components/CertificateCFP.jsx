@@ -14,13 +14,13 @@ class CertificateCFP extends Component {
     return (
       <div>
         <object
-          data={require("../docs/CertificadoCFP.pdf")}
+          data={`${process.env.PUBLIC_URL}/pdfs/CertificadoCFP.pdf`}
           type="application/pdf"
           className="w-full h-full absolute"
         >
           <br />
           <a
-            href={require("../docs/CertificadoCFP.pdf")}
+            href={`${process.env.PUBLIC_URL}/pdfs/CertificadoCFP.pdf`}
             id="idLinkCertificadoCFP"
             download="CertificadoCFP.pdf"
           >
