@@ -1,6 +1,6 @@
 import React from "react";
 import AnimatedSection from "../animations/AnimatedSection";
-import etecPng from "../data/ETEC.png";
+import etecWebp from "../data/ETEC.webp";
 
 const projects = [
   {
@@ -8,7 +8,7 @@ const projects = [
     title: "ETEC",
     description:
       "ETEC Is a demo project to manage Students, Teachers, and Subjects easily and efficiently!",
-    image: etecPng,
+    image: etecWebp,
     href: "https://github.com/Gonzalez-Luciano/ETEC",
     shadowColorClass: "shadow-cyan-500/50",
     technologies: ["Python", "TKinter", "MySql"],

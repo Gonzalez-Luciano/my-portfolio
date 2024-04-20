@@ -84,11 +84,11 @@ const Education = () => {
         </div>
         <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row mx-auto mb-auto">
           {schools.map((school) => (
-            <Popover className="relative sm:mt-24 mt-2 ml-1">
+            <Popover className="self-center relative sm:mt-24 mt-2 ml-1" id={school.id} key={school.id}>
               {({ open }) => (
                 <>
                   <Popover.Button
-                  id={school.id}
+                  
                   onClick={`${  open?setIsOpen(false):""}`}
                     className={`
                 ${

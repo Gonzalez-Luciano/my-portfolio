@@ -17,7 +17,7 @@ const Home = () => {
             />
           </div>
           <div className="my-8">
-            <div className="uppercase tracking-wide text-3xl sm:text-4xl text-white font-semibold opacity-0 animate-[TextAppear_2s_.2s_normal_forwards]">
+            <div className=" uppercase tracking-wide text-3xl sm:text-4xl text-white font-semibold opacity-0 animate-[TextAppear_2s_.2s_normal_forwards]">
               LUCIANO GONZÁLEZ
             </div>
             <p
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
             <div className="hover:scale-125 ease-out duration-300 mx-auto sm:mr-20  sm:ml-0">
               <a
-                href="https://github.com/TuKK2"
+                href="https://github.com/Gonzalez-Luciano"
                 target="_blank"
                 rel="noreferrer"
               >

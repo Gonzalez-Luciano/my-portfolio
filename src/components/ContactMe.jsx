@@ -25,7 +25,7 @@ const ContactMe = () => {
               <div className=" text-2xl text-white font-semibold mb-5">
                 Get in Touch 😄
               </div>
-              <div className="space-y-12 ">
+              <div className="space-y-10">
                 <div>
                   <label htmlFor="name">Name</label>
                   <div className="m-1">
