@@ -1,17 +1,5 @@
 import React from "react";
 import AnimatedSection from "../animations/AnimatedSection";
-import cWebp from "../data/Technologies/c.webp";
-import pythonWebp from "../data/Technologies/python.webp";
-import boostrapWebp from "../data/Technologies/boostrap.webp";
-import reactWebp from "../data/Technologies/react.webp";
-import phpWebp from "../data/Technologies/php.webp";
-import htmlWebp from "../data/Technologies/html.webp";
-import cssWebp from "../data/Technologies/css.webp";
-import jsWebp from "../data/Technologies/js.webp";
-import tailwindWebp from "../data/Technologies/tailwind.webp";
-import sqlServerWebp from "../data/Technologies/sql_server.webp";
-import mySqlWebp from "../data/Technologies/my_sql.webp";
-import mariadbWebp from "../data/Technologies/mariadb.webp";
 
 const Skills = () => {
   return (
@@ -23,84 +11,84 @@ const Skills = () => {
         <div className="p-8 grid grid-cols-3 gap-1 sm:gap-3 mt-7">
           <div className="mx-auto mb-5">
             <img
-              src={cWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/c.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_13px_10px_rgba(0,102,255,0.5)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={pythonWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/python.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(255,255,51,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={phpWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/php.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(204,51,204,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={htmlWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/html.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(255,153,51,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={cssWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/css.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(51,153,255,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={jsWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/js.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(255,255,51,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={reactWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/react.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(51,153,255,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={boostrapWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/boostrap.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(204,51,204,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={tailwindWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/tailwind.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(51,153,255,0.35)]"
             />
           </div>
           <div className="mx-auto mb-5">
             <img
-              src={mariadbWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/mariadb.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(51,153,255,0.35)]"
             />
           </div>  
           <div className="mx-auto mb-5">
             <img
-              src={sqlServerWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/sql_server.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(255,255,255,0.35)]"
             />
           </div> 
           <div className="mx-auto mb-5">
             <img
-              src={mySqlWebp}
+              src={process.env.PUBLIC_URL + "/images/Technologies/my_sql.webp"}
               alt=""
               className="h-10 sm:h-16 lg:h-20 drop-shadow-[0_10px_10px_rgba(51,153,255,0.35)]"
             />

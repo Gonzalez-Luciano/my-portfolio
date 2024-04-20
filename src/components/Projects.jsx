@@ -1,6 +1,5 @@
 import React from "react";
 import AnimatedSection from "../animations/AnimatedSection";
-import etecWebp from "../data/ETEC.webp";
 
 const projects = [
   {
@@ -8,7 +7,7 @@ const projects = [
     title: "ETEC",
     description:
       "ETEC Is a demo project to manage Students, Teachers, and Subjects easily and efficiently!",
-    image: etecWebp,
+    image: process.env.PUBLIC_URL + "/images/Projects/ETEC.webp",
     href: "https://github.com/Gonzalez-Luciano/ETEC",
     shadowColorClass: "shadow-cyan-500/50",
     technologies: ["Python", "TKinter", "MySql"],
