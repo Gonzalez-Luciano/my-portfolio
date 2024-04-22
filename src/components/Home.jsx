@@ -1,9 +1,22 @@
-import React from "react";
-import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import React, { useState, useEffect } from "react";
+import { ArrowDownTrayIcon, ArrowDownIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000); 
+
+    return () => clearTimeout(timer);
+  }, []); 
   return (
-    <div id="Home" className="m-4 mb-24 max-w-full mx-auto flex justify-center">
+    <div
+      id="Home"
+      className="m-4 mb-24 max-h-full max-w-full mx-auto flex justify-center"
+    >
       <div className="mt-44 ">
         <div className="flex justify-center max-w-2xl sm:ml-9 flex-col ">
           <div className="flex  mx-5 opacity-0 animate-ObjectAppear">
@@ -61,7 +74,11 @@ const Home = () => {
                 rel="noreferrer"
               >
                 <div className="opacity-0 mx-auto w-10 sm:mx-0 sm:shrink-0 sm:w-12 xl:w-16 animate-ObjectAppear">
-                  <img className=" " src={process.env.PUBLIC_URL + "/images/Home/github.webp"} alt="GitHub" />
+                  <img
+                    className=" "
+                    src={process.env.PUBLIC_URL + "/images/Home/github.webp"}
+                    alt="GitHub"
+                  />
                 </div>
               </a>
             </div>
@@ -85,6 +102,18 @@ const Home = () => {
           <div className="flex opacity-0 mt-4 text-lg animate-ObjectAppear">
             <p>Mar del Plata - Argentina</p>
           </div>
+        </div>
+        <div
+          className={`hidden text-white sm:flex my-28 opacity-0 animate-ObjectBounce transition-opacity duration-300 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <a
+            href="#Education"
+            className="p-4 rounded-full mx-auto transition duration-300 ease-in bg-blue-600 hover:bg-blue-500"
+          >
+            <ArrowDownIcon className="w-12" />
+          </a>
         </div>
       </div>
     </div>
