@@ -20,7 +20,7 @@ const ContactMe = () => {
             </p>
           </div>
           <div className="basis-1/2 m-5 p-8 border rounded-lg border-orange-500 shadow-lg hover:shadow-orange-500/50 ease-in duration-300">
-            <form className="group" name="contact" method="POST" noValidate>
+            <form className="group" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" noValidate>
               <input type="hidden" name="form-name" value="contact" />
               <div className=" text-2xl text-white font-semibold mb-5">
                 Get in Touch 😄
