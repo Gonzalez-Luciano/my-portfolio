@@ -16,7 +16,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <AnimatedSection sectionId="Projects">
+    <AnimatedSection sectionId="Projects" className="pt-20">
       <div className="flex flex-col justify-center mx-auto max-w-2xl mt-10">
         <div className="text-2xl sm:text-3xl text-white font-semibold">
           My Projects

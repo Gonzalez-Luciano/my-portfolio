@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className="m-4 mb-24 max-h-full max-w-full mx-auto flex justify-center"
+      className="max-h-full max-w-full mx-auto flex justify-center"
     >
-      <div className="mt-44 ">
+      <div className="my-20 sm:mt-44">
         <div className="flex justify-center max-w-2xl sm:ml-9 flex-col ">
           <div className="flex  mx-5 opacity-0 animate-ObjectAppear">
             <img

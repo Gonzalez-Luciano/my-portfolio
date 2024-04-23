@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 
-const AnimatedSection = ({ children, sectionId }) => {
+const AnimatedSection = ({ children, sectionId, className}) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const [{ opacity, transform }, setSpring] = useSpring(() => ({
+  const [{ opacity, transform}, setSpring] = useSpring(() => ({
     opacity: 0,
     transform: 'translateY(50px)',
   }));
@@ -32,7 +32,7 @@ const AnimatedSection = ({ children, sectionId }) => {
   }, [isVisible, setSpring]);
 
   return (
-    <animated.div id={sectionId} style={{ opacity, transform}}>
+    <animated.div id={sectionId} className={className} style={{ opacity, transform}}>
       {children}
     </animated.div>
   );
