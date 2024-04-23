@@ -3,7 +3,7 @@ import AnimatedSection from "../animations/AnimatedSection";
 
 const Skills = () => {
   return (
-    <AnimatedSection sectionId="Technologies">
+    <AnimatedSection sectionId="Technologies" className="pt-20">
       <div className="flex flex-col justify-center mx-auto max-w-2xl mt-10">
         <div className="mx-auto text-3xl sm:text-4xl text-white font-semibold">
           Technologies

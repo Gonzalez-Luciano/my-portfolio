@@ -66,7 +66,7 @@ const Education = () => {
     <AnimatedSection sectionId="Education">
       <div
         ref={ref}
-        className="min-h-svh flex flex-col my-auto items-center relative justify-center"
+        className="min-h-svh flex flex-col my-auto relative justify-center"
       >
         <div
           className={`${
@@ -79,7 +79,7 @@ const Education = () => {
             Here is my <span className="text-orange-500">educational</span> journey
           </p>
         </div>
-        <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row mx-auto mb-auto">
+        <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row justify-between sm:mx-auto mb-auto">
           {schools.map((school) => (
             <Popover className="self-center relative sm:mt-24 mt-2 ml-1" id={school.id} key={school.id}>
               {({ open }) => (

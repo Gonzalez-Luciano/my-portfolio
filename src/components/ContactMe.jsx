@@ -8,7 +8,7 @@ const ContactMe = () => {
   const [message, setMessage] = useState("");
 
   return (
-    <AnimatedSection sectionId="Contact">
+    <AnimatedSection sectionId="Contact" className="pt-20">
       <div className="mx-auto max-w-3xl mt-10">
         <div className="flex flex-col sm:flex-row justify-center mt-5">
           <div className="basis-1/2 text-pretty text-white m-5">
