@@ -1,9 +1,10 @@
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../animations/AnimatedSection";
 import { FormattedMessage } from "react-intl";
+import { langContext } from "../context/langContext";
 
 const schools = [
   {
@@ -90,6 +91,8 @@ const Education = () => {
     setIsOpen(!isOpen);
   };
 
+  const locale = useContext(langContext);
+
   return (
     <AnimatedSection sectionId="Education">
       <div
@@ -108,16 +111,24 @@ const Education = () => {
               id="education.text.content1"
               defaultMessage="Here is my "
             />
-            <span className="text-orange-500">
+            <span
+              className={`${
+                locale.defaultLocale === "en-US" ? "text-orange-500" : ""
+              }`}
+            >
               <FormattedMessage
                 id="education.keyword"
                 defaultMessage="educational"
               />
             </span>
-            <FormattedMessage
-              id="education.text.content2"
-              defaultMessage=" journey"
-            />
+            <span className={`${
+                locale.defaultLocale === "es-MX" ? "text-orange-500" : ""
+              }`}>
+              <FormattedMessage
+                id="education.text.content2"
+                defaultMessage=" journey"
+              />
+            </span>
           </p>
         </div>
         <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row justify-between sm:mx-auto mb-auto">
@@ -195,9 +206,17 @@ const Education = () => {
                                 : "hover:bg-orange-500"
                             } text-sm sm:text-base bg-orange-600 rounded text-white p-2`}
                           >
-                            {school.certificateDisabled
-                              ? <FormattedMessage id="education.inProgress" defaultMessage="In Progress"/>
-                              : <FormattedMessage id="education.seeCertificate" defaultMessage="See Certificate"/>}
+                            {school.certificateDisabled ? (
+                              <FormattedMessage
+                                id="education.inProgress"
+                                defaultMessage="In Progress"
+                              />
+                            ) : (
+                              <FormattedMessage
+                                id="education.seeCertificate"
+                                defaultMessage="See Certificate"
+                              />
+                            )}
                           </Link>
                         </div>
                       </div>
