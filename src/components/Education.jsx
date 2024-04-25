@@ -3,51 +3,79 @@ import { Fragment, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../animations/AnimatedSection";
+import { FormattedMessage } from "react-intl";
 
 const schools = [
   {
-    id:"ISET",
+    id: "ISET",
     name: "ISET",
     title: "Instituto Superior De Estudios Tecnicos",
     date: "2023",
-    subTitle: "Technical Title In Programming ",
-    description:
-      "Currently specializing in web development with a focus on JavaScript, HTML, and CSS. Also, refining proficiency in English and C programming.",
+    subTitle: (
+      <FormattedMessage
+        id="education.subTitle.Iset"
+        defaultMessage="Technical Title In Programming"
+      />
+    ),
+    description: (
+      <FormattedMessage
+        id="education.description.Iset"
+        defaultMessage="Currently specializing in web development with a focus on JavaScript, HTML, and CSS. Also, refining proficiency in English and C programming."
+      />
+    ),
     time: "Expected completion: 2025",
     href: "##",
     image: process.env.PUBLIC_URL + "/images/Education/ISET.webp",
     certificateDisabled: true,
-    borderColor:"border-green-500",
-    shadowColorClass:"hover:shadow-green-500/50"
+    borderColor: "border-green-500",
+    shadowColorClass: "hover:shadow-green-500/50",
   },
   {
-    id:"CFP_N_401",
+    id: "CFP_N_401",
     name: "CFP N°401",
     title: "Centro de Formacíon Profesional N°401",
     date: "2022",
-    subTitle: "Programming Course",
-    description:
-      "Completed a programming course covering C, Python, and MySQL. Also acquired skills in using TKinter.",
+    subTitle: (
+      <FormattedMessage
+        id="education.subTitle.CFP"
+        defaultMessage="Programming Course"
+      />
+    ),
+    description: (
+      <FormattedMessage
+        id="education.description.CFP"
+        defaultMessage="Completed a programming course covering C, Python, and MySQL. Also acquired skills in using TKinter."
+      />
+    ),
     time: "540 hrs",
     href: "CertificateCFP.pdf",
     image: process.env.PUBLIC_URL + "/images/Education/CFP_401.webp",
     certificateDisabled: false,
-    borderColor:"border-pink-500",
-    shadowColorClass:"hover:shadow-pink-500/50"
+    borderColor: "border-pink-500",
+    shadowColorClass: "hover:shadow-pink-500/50",
   },
   {
-    id:"IAM",
+    id: "IAM",
     name: "IAM",
     title: "Instituto Argentino Modelo",
     date: "2012-2021",
-    subTitle: "Bachelor's Degree",
-    description:
-      "Studied English, Administration, and Economics, gaining comprehensive knowledge in these areas.",
+    subTitle: (
+      <FormattedMessage
+        id="education.subTitle.IAM"
+        defaultMessage="Bachelor's Degree"
+      />
+    ),
+    description: (
+      <FormattedMessage
+        id="education.description.IAM"
+        defaultMessage="Studied English, Administration, and Economics, gaining comprehensive knowledge in these areas."
+      />
+    ),
     href: "CertificateIAM.pdf",
     image: process.env.PUBLIC_URL + "/images/Education/IAM.webp",
     certificateDisabled: false,
-    borderColor:"border-cyan-500",
-    shadowColorClass:"hover:shadow-cyan-500/50"
+    borderColor: "border-cyan-500",
+    shadowColorClass: "hover:shadow-cyan-500/50",
   },
 ];
 
@@ -76,17 +104,33 @@ const Education = () => {
           }`}
         >
           <p className="font-medium text-white text-2xl">
-            Here is my <span className="text-orange-500">educational</span> journey
+            <FormattedMessage
+              id="education.text.content1"
+              defaultMessage="Here is my "
+            />
+            <span className="text-orange-500">
+              <FormattedMessage
+                id="education.keyword"
+                defaultMessage="educational"
+              />
+            </span>
+            <FormattedMessage
+              id="education.text.content2"
+              defaultMessage=" journey"
+            />
           </p>
         </div>
         <Popover.Group className="flex sm:flex-col sm:mb-0 sm:ml-0 flex-row justify-between sm:mx-auto mb-auto">
           {schools.map((school) => (
-            <Popover className="self-center relative sm:mt-24 mt-2 ml-1" id={school.id} key={school.id}>
+            <Popover
+              className="self-center relative sm:mt-24 mt-2 ml-1"
+              id={school.id}
+              key={school.id}
+            >
               {({ open }) => (
                 <>
                   <Popover.Button
-                  
-                  onClick={`${  open?setIsOpen(false):""}`}
+                    onClick={`${open ? setIsOpen(false) : ""}`}
                     className={`
                 ${
                   open
@@ -97,7 +141,11 @@ const Education = () => {
                         ? "sm:animate-[ObjectAppear_2s_.2s_normal_forwards]"
                         : ""
                     }
-                    hover:shadow-lg ${school.shadowColorClass} sm:opacity-0 sm:ml-10 w-20 sm:w-28 inline-flex items-center border rounded-md px-3 py-2 font-medium  ${school.borderColor}`}
+                    hover:shadow-lg ${
+                      school.shadowColorClass
+                    } sm:opacity-0 sm:ml-10 w-20 sm:w-28 inline-flex items-center border rounded-md px-3 py-2 font-medium  ${
+                      school.borderColor
+                    }`}
                   >
                     <img src={school.image} alt={school.name} />
                   </Popover.Button>
@@ -113,7 +161,9 @@ const Education = () => {
                     afterLeave={handlePopoverClick}
                   >
                     <Popover.Panel className="text-pretty w-full fixed mx-auto sm:w-fit sm:ml-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-3 ">
-                      <div className={`border ${school.borderColor} rounded-lg`}>
+                      <div
+                        className={`border ${school.borderColor} rounded-lg`}
+                      >
                         <div className="relative grid gap-8 bg-opacity-55 bg-black p-4 sm:p-7">
                           <div className="-m-3 flex items-center p-2 ">
                             <div className="hidden md:flex shrink-0 items-center justify-center text-white h-12 w-12">
@@ -146,8 +196,8 @@ const Education = () => {
                             } text-sm sm:text-base bg-orange-600 rounded text-white p-2`}
                           >
                             {school.certificateDisabled
-                              ? "In Progress"
-                              : "See Certificate"}
+                              ? <FormattedMessage id="education.inProgress" defaultMessage="In Progress"/>
+                              : <FormattedMessage id="education.seeCertificate" defaultMessage="See Certificate"/>}
                           </Link>
                         </div>
                       </div>
