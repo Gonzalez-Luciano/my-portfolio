@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { ArrowDownTrayIcon, ArrowDownIcon } from "@heroicons/react/24/outline";
+import { FormattedMessage } from "react-intl";
+import { langContext } from "../context/langContext";
 
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2000); 
-
-    return () => clearTimeout(timer);
-  }, []); 
+  const locale = useContext(langContext);
+  let pdfFileName;
+  if (locale.defaultLocale === "en-US") {
+    pdfFileName = "LucianoGonzalezEnglishCV.pdf";
+  } else if (locale.defaultLocale === "es-MX") {
+    pdfFileName = "LucianoGonzalezSpanishCV.pdf";
+  } else {
+    pdfFileName = "LucianoGonzalezEnglishCV.pdf";
+  }
   return (
     <div
       id="Home"
@@ -30,27 +31,47 @@ const Home = () => {
             <div className=" uppercase tracking-wide text-3xl sm:text-4xl text-white font-semibold opacity-0 animate-[TextAppear_2s_.2s_normal_forwards]">
               LUCIANO GONZÁLEZ
             </div>
-            <p
-              href="#"
-              className="block mt-1 text-3xl leading-tight font-medium  bg-gradient-to-r from-blue-500 via-orange-500 to-yellow-300 text-transparent bg-clip-text opacity-0 animate-[TextAppear_2s_.5s_normal_forwards]"
-            >
-              Software Developer and Passionate Learner
-            </p>
-            <p className="text-pretty mt-2 text-lg text-slate-100 opacity-0 animate-[TextAppear_2s_.7s_normal_forwards]">
-              Enthusiastic about my pursuits, I eagerly welcome{" "}
-              <span className=" text-white underline decoration-2 decoration-cyan-500">
-                challenges
-              </span>{" "}
-              and relish the opportunity to expand my knowledge. My key quality?{" "}
-              <span className=" text-white underline decoration-2 decoration-lime-500">
-                Adaptability
-              </span>
-              : It's the cornerstone of my{" "}
-              <span className=" text-white underline decoration-2 decoration-orange-500">
-                evolution
-              </span>
-              .
-            </p>
+            <div>
+              <p className="block mt-1 text-3xl leading-tight font-medium  bg-gradient-to-r from-blue-500 via-orange-500 to-yellow-300 text-transparent bg-clip-text opacity-0 animate-[TextAppear_2s_.5s_normal_forwards]">
+                <FormattedMessage
+                  id="home.text.title"
+                  defaultMessage="Software Developer and Passionate Learner"
+                />
+              </p>
+              <p className="text-pretty mt-2 text-lg text-slate-100 opacity-0 animate-[TextAppear_2s_.7s_normal_forwards]">
+                <FormattedMessage
+                  id="home.text.content1"
+                  defaultMessage="Enthusiastic about my pursuits, I eagerly welcome "
+                />
+                <span className=" text-white underline decoration-2 decoration-cyan-500">
+                  <FormattedMessage
+                    id="home.text.keyWords.0"
+                    defaultMessage="challenges "
+                  />
+                </span>
+                <FormattedMessage
+                  id="home.text.content2"
+                  defaultMessage="and relish the opportunity to expand my knowledge. My key quality? "
+                />
+                <span className=" text-white underline decoration-2 decoration-lime-500">
+                  <FormattedMessage
+                    id="home.text.keyWords.1"
+                    defaultMessage="Adaptability"
+                  />
+                </span>
+                <FormattedMessage
+                  id="home.text.content3"
+                  defaultMessage=": It's the cornerstone of my "
+                />
+                <span className=" text-white underline decoration-2 decoration-orange-500">
+                  <FormattedMessage
+                    id="home.text.keyWords.2"
+                    defaultMessage="evolution"
+                  />
+                </span>
+                .
+              </p>
+            </div>
           </div>
           <div className="flex flex-wrap sm:flex-row sm:flex-nowrap items-center justify-center">
             <div className="hover:scale-125 ease-out duration-300 mx-auto sm:mr-20 sm:ml-0">
@@ -85,7 +106,7 @@ const Home = () => {
             <button className="opacity-0 rounded-3xl border-2 border-blue-600 p-2 hover:text-white hover:bg-blue-600  ease-out duration-300 mt-5 sm:mt-0 animate-ObjectAppear">
               <a
                 className="flex items-center"
-                href={`${process.env.PUBLIC_URL}/pdfs/LucianoGonzalezCV.pdf`}
+                href={`${process.env.PUBLIC_URL}/pdfs/${pdfFileName}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 download="LucianoGonzalez.pdf"
@@ -95,7 +116,7 @@ const Home = () => {
                   aria-hidden="true"
                 />
 
-                <p className="">Download my CV</p>
+                <p className=""><FormattedMessage id="home.buttonText" defaultMessage= "Download my CV"/></p>
               </a>
             </button>
           </div>
@@ -103,14 +124,10 @@ const Home = () => {
             <p>Mar del Plata - Argentina</p>
           </div>
         </div>
-        <div
-          className={`hidden text-white sm:flex my-28 opacity-0 animate-ObjectBounce transition-opacity duration-300 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
+        <div className="hidden text-white sm:flex my-28 opacity-0 animate-ObjectAppear">
           <a
             href="#Education"
-            className="p-4 rounded-full mx-auto transition duration-300 ease-in bg-blue-600 hover:bg-blue-500"
+            className="p-4  rounded-full mx-auto hover:[animation-play-state:paused] animate-ObjectBounce transition duration-300 ease-in bg-blue-600 hover:bg-blue-500"
           >
             <ArrowDownIcon className="w-12" />
           </a>

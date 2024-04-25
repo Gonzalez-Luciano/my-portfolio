@@ -1,12 +1,12 @@
 import React from "react";
 import AnimatedSection from "../animations/AnimatedSection";
+import { FormattedMessage } from "react-intl";
 
 const projects = [
   {
     id: "Etec",
     title: "ETEC",
-    description:
-      "ETEC Is a demo project to manage Students, Teachers, and Subjects easily and efficiently!",
+    description:<FormattedMessage id="projects.text" defaultMessage="ETEC Is a demo project to manage Students, Teachers, and Subjects easily and efficiently!"/>,
     image: process.env.PUBLIC_URL + "/images/Projects/ETEC.webp",
     href: "https://github.com/Gonzalez-Luciano/ETEC",
     shadowColorClass: "shadow-cyan-500/50",
@@ -19,7 +19,7 @@ const Projects = () => {
     <AnimatedSection sectionId="Projects" className="pt-20">
       <div className="flex flex-col justify-center mx-auto max-w-2xl mt-10">
         <div className="text-2xl sm:text-3xl text-white font-semibold">
-          My Projects
+          <FormattedMessage id="projects.title" defaultMessage="My Projects"/>
         </div>
 
         <div className="relative rounded-xl overflow-auto">

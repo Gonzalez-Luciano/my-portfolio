@@ -1,12 +1,13 @@
 import React from "react";
 import AnimatedSection from "../animations/AnimatedSection";
+import { FormattedMessage } from "react-intl";
 
 const Skills = () => {
   return (
     <AnimatedSection sectionId="Technologies" className="pt-20">
       <div className="flex flex-col justify-center mx-auto max-w-2xl mt-10">
         <div className="mx-auto text-3xl sm:text-4xl text-white font-semibold">
-          Technologies
+          <FormattedMessage id="technologies.title" defaultMessage="Technologies"/>
         </div>
         <div className="p-8 grid grid-cols-3 gap-1 sm:gap-3 mt-7">
           <div className="mx-auto mb-5">
